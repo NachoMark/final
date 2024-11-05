@@ -19,10 +19,10 @@ const turnoSchema = new mongoose.Schema({
         required: true,
     },
     fecha: {
-        type: Date.now()
+        type: String
     },
     hora: {
-        type: Date.now()
+        type: String
     }
 })
 

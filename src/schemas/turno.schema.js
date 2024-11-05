@@ -13,10 +13,10 @@ export const createTurnoSchema = z.object({
     doctor: z.string({
         required_error: "Es requerido un doctor"
     }),
-    fecha: z.date({
+    fecha: z.string({
         required_error: "Es requerido una fecha"
     }),
-    hora: z.date({
+    hora: z.string({
         required_error: "Es requerido un horario"
     }),
 })

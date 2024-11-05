@@ -1,18 +1,24 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Register from "./pages/Registrar";
-import Login from "./pages/Login";
-import Home from "./pages/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Registrar from "./pages/Registrar"
+import Login from "./pages/Login"
+import Home from "./pages/Home"
+import { TurnoProvider } from "./context/TurnoContext"
 
-function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home></Home>} />
-        <Route path="/login" element={<Login></Login>} />
-        <Route path="/register" element={<Register></Register>} />
-      </Routes>
-    </BrowserRouter>
-  );
+
+function App(){
+  return(
+      <BrowserRouter>
+        <TurnoProvider>
+          <Routes>
+            <Route path="/" element={<h1>Landing</h1>}/>
+            <Route path="/home" element={<Home></Home>}/>
+            <Route path="/login" element={<Login></Login>}/>
+            <Route path="/register" element={<Registrar></Registrar>}/>
+          </Routes>
+        </TurnoProvider>
+      </BrowserRouter>
+  )
 }
 
-export default App;
+
+export default App
